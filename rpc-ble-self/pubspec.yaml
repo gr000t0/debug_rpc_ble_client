@@ -1,0 +1,14 @@
+name: bora_rpc
+description: Dart implementation of the Bora RPC protocol.
+version: 1.0.0
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  args: ^2.2.0
+  cure: ^0.1.0-nullsafety.0
+  logging: ^1.0.1
+  protobuf: ^2.0.0
+  libserialport: ^0.2.0+3
+  lints: ^2.0.1
