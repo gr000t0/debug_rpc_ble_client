@@ -47,7 +47,7 @@ class LoggingServiceHandler {
         await listUserEvents();
         break;
       default:
-        print('Methode nicht gefunden.');
+        print('unknown method');
     }
   }
 }

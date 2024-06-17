@@ -44,7 +44,7 @@ class IdentifyServiceHandler {
         await getSystemValueRangeDescriptor();
         break;
       default:
-        print('Method not found');
+        print('unknown method');
     }
   }
 

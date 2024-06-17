@@ -101,7 +101,7 @@ class ExtractorServiceHandler {
         await streamExtractorStatusUpdates();
         break;
       default:
-        print('Ungültige Methode.');
+        print('unknown method');
     }
   }
 }

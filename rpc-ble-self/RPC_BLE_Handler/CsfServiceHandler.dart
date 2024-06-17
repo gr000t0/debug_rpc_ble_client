@@ -44,7 +44,7 @@ class CsfServiceHandler {
     client.saveCsf(SaveCsfRequest(csfParameter: [csfParameter]), RequestOptions(headers: {}));
     //var response = await client.saveCsf(SaveCsfRequest(csfParameter: [csfParameter]), RequestOptions(headers: {}));
     //print(response.toString());
-    await Future.delayed(Duration(seconds: 20));
+    await Future.delayed(Duration(seconds: 20)); // wait for comfirmation
     print('Saved Csf');
     
     var response = await client.getSavedCsf(GetSavedCsfRequest(), RequestOptions(headers: {}));
@@ -60,9 +60,9 @@ class CsfServiceHandler {
 
   Future<void> callMethod(String methodName) async {
     var word = methodName.split('-');
-    if (word[0] == 'SaveCsf') {
+    if (word[0] == 'saveCsf') {
       await SaveCsf(int.parse(word[1]), int.parse(word[2]), word[3], int.parse(word[4]), int.parse(word[5]), int.parse(word[6]), int.parse(word[7]), word[8] == 'true' ? true : false ,int.parse(word[9]), int.parse(word[10]), int.parse(word[11]));
-    } else if (word[0] == 'GetCsf') {
+    } else if (word[0] == 'getSavedCsf') {
       await GetCsf();
     }
   }

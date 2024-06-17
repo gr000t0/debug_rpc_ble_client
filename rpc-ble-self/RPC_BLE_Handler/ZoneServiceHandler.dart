@@ -3,6 +3,7 @@ import 'package:bora_rpc/gen/bora/generic/csf/v1/csf.pb.dart';
 import 'package:bora_rpc/gen/bora/generic/zone/v1/generic_zone.pbclient.dart';
 import 'package:bora_rpc/gen/bora/generic/zone/v1/zone_service.pbclient.dart';
 import 'package:bora_rpc/gen/bora/generic/zone/v1/zone_service.pb.dart';
+import 'package:bora_rpc/gen/bora/generic/generic_definitions.pb.dart';
 
 class ZoneServiceHandler {
   ZoneServiceClient client;
@@ -27,14 +28,12 @@ class ZoneServiceHandler {
   }
 
   Future<void> setMode(String uid, int powerlevel) async {
-  var mode = ZoneMode()..powerLevel = powerlevel; // Korrekt gesetzter powerLevel
+  var mode = ZoneMode()..powerLevel = powerlevel; 
   var request = SetModeRequest(uId: uid, mode: mode);
-  try {
+  
     var response = await client.setMode(request, RequestOptions(headers: {}));
     print("Set Mode Response: ${response.toString()}");
-  } catch (e) {
-    print("Fehler beim Setzen des Mode: $e");
-  }
+
 }
 
   Future<void> setTimer(String uid, int duration) async {
@@ -65,12 +64,42 @@ class ZoneServiceHandler {
     var response = await client.getZoneStatus(GetZoneStatusRequest(uId: uid), RequestOptions(headers: {}));
     print("Zone Status: ${response.toString()}");
   }
-/*
-  Future<void> startOrModifyCsf(String uid, CsfParameter csfParameter) async {
-    var request = StartOrModifyCsfRequest(uId: uid, csfParameter: csfParameter);
+
+
+  Future<void> startOrModifyCsf(String uid, int id, int index, String type, int targetvalue, int stepsize, int duration, int remaining, bool running,  int minval, int maxval, int settings) async {
+    
+    CsfParameter csfParameter = CsfParameter();
+    csfParameter.csfId = id;
+    csfParameter.csfIndex = index;
+    
+    if (type == 'pasta') {
+      csfParameter.csfType = CsfType.CSF_TYPE_PASTA;
+    } else if (type == 'frying') {
+      csfParameter.csfType = CsfType.CSF_TYPE_FRYING;
+    } else if (type == 'grill') {
+      csfParameter.csfType = CsfType.CSF_TYPE_GRILL;
+    } else if (type == 'streamer') {
+      csfParameter.csfType = CsfType.CSF_TYPE_STEAMER;
+    } else if (type == 'quickstart') {
+      csfParameter.csfType = CsfType.CSF_TYPE_QUICKSTART;
+    } else if (type == 'warming') {
+      csfParameter.csfType = CsfType.CSF_TYPE_WARMING;
+    } else {
+      csfParameter.csfType = CsfType.CSF_TYPE_UNSPECIFIED;
+    }
+    csfParameter.csfTypeTargetValue = targetvalue;
+    csfParameter.csfTargetStepSize = stepsize;
+    csfParameter.csfTimeToSet = Timer(duration: duration, remaining: remaining, running: running);
+    csfParameter.csfTargetMinVal = minval;
+    csfParameter.csfTargetMaxVal = maxval;
+    csfParameter.csfSettings = settings;
+  
+    StartOrModifyCsfRequest request = StartOrModifyCsfRequest(uId: uid, csfParameter: csfParameter);
+
     var response = await client.startOrModifyCsf(request, RequestOptions(headers: {}));
     print("Start/Modify CSF Response: ${response.toString()}");
-  
+
+  }
 
   Future<void> stopCsf(String uid) async {
     var request = StopCsfRequest(uId: uid);
@@ -78,7 +107,7 @@ class ZoneServiceHandler {
     print("Stop CSF Response: ${response.toString()}");
   }
 
-*/
+
   Future<void> callMethod(String methodName) async {
     var parts = methodName.split('-');
     switch (parts[0]) {
@@ -106,8 +135,14 @@ class ZoneServiceHandler {
       case 'getZoneSettingsAll':
         await getZoneSettingsAll();
         break;
+      case 'startOrModifyCsf':
+        await startOrModifyCsf(parts[1], int.parse(parts[2]), int.parse(parts[3]), parts[4], int.parse(parts[5]), int.parse(parts[6]), int.parse(parts[7]), int.parse(parts[8]), parts[9] == 'true' ? true : false, int.parse(parts[10]), int.parse(parts[11]), int.parse(parts[12]));
+        break;
+      case 'stopCsf':
+        await stopCsf(parts[1]);
+        break;
       default:
-        print('Unknown method');
+        print('unknown method');
         break;
     }
   }

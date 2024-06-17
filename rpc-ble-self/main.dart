@@ -31,7 +31,7 @@ void main(List<String> argv) async {
   // Beispiel für argv: ['cooktopService:getCooktopSettings']
   var commandParts = argv[0].split(':');
   if (commandParts.length != 2) {
-    print('Ungültiger Befehl. Bitte verwenden Sie das Format "service:methode".');
+    print('invalid command. please use the format "service:method".');
     exit(1);
   }
 
@@ -76,7 +76,7 @@ void main(List<String> argv) async {
       await zoneServiceHandler.callMethod(methodName);
       break;
     default:
-      print('Ungültiger Service.');
+      print('invalid Service');
       exit(1);
   }
 

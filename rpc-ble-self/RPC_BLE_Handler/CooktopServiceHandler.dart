@@ -1,6 +1,8 @@
 import 'package:bora_rpc/client.dart';
 import 'package:bora_rpc/gen/bora/generic/cooktop/v1/cooktop_service.pbclient.dart';
 import 'package:bora_rpc/gen/bora/generic/cooktop/v1/generic_cooktop.pb.dart';
+import 'package:bora_rpc/gen/bora/pure/cooktop/v1/pure_cooktop.pb.dart';
+
 
 
 class CooktopServiceHandler {
@@ -17,6 +19,50 @@ class CooktopServiceHandler {
       print(response.childlockSetting.toString());
       
     }
+    
+  }
+
+  Future<void> setSpecificCooktopSetting(String setting) async {   //unimplemented by CM
+     
+    switch(setting) {
+      case 'cleanLock':
+        
+        break;
+      case 'automaticPotDetection.on':
+        
+        break;
+      case 'automaticPotDetection.off':
+        
+        SetSpecificCooktopSettingRequest request = SetSpecificCooktopSettingRequest(pure: SetCooktopSettingRequest(setAutomaticPotDetectionRequest: SetAutomaticPotDetectionRequest(automaticPotDetection: false)));
+        var response = await client.setSpecificCooktopSetting(request, RequestOptions(headers: {}));
+        print(response.toString());
+        break;
+      case'permanentChildLock':
+        
+        break;
+      case 'sensitivity.SLOW':
+        
+        break;
+      case 'sensitivity.DEFAULT':
+        
+        break;
+      case 'sensitivity.FAST':
+        
+        break;
+      case 'ledTest':
+        
+        break;
+      case 'automaticPotDetection.on':
+        
+        break;
+      case 'automaticPotDetection.off':
+        
+        break;
+      
+    }
+    
+    
+
     
   }
 
@@ -89,8 +135,11 @@ Future<void> callMethod(String methodName) async {
     case 'getCooktopStatus':
       await getCooktopStatus();
       break;
+    case 'setSpecificCooktopSetting':
+      await setSpecificCooktopSetting(word[1]);
+      break;
     default:
-      print('Methode nicht gefunden.');
+      print('unknown method');
   }
 
 

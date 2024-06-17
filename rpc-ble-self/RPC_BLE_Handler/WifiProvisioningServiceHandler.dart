@@ -80,7 +80,7 @@ class WiFiProvisioningServiceHandler {
         await wifiProvisioning(word[1], word[2]);
         break;
       default:
-        print('Methode nicht gefunden.');
+        print('unknown method');
         break;
     }
   }
