@@ -37,3 +37,7 @@
   ```
   dart rpc2cm.dart csfService:saveCsf-11-3-pasta-100-10-30000-0-false-60-140-1
   ```
+- To start CSF, use:
+  ```
+  dart rpc2cm.dart zoneService:startOrModifyCsf-front_right-11-3-pasta-100-10-30000-0-false-60-140-1
+  ```
