@@ -27,13 +27,13 @@
 ### Examples:
 - To get CookTop status, type:
   ```
-  dart main.dart cooktopService:getCooktopStatus
+  dart rpc2cm.dart cooktopService:getCooktopStatus
   ```
 - To set child lock, type:
   ```
-  dart main.dart cooktopService:setChildLock-on
+  dart rpc2cm.dart cooktopService:setChildLock-on
   ```
 - To save CSF, use:
   ```
-  dart main.dart csfService:saveCsf-0-3-100-300000-pasta-1
+  dart rpc2cm.dart csfService:saveCsf-0-3-100-300000-pasta-1
   ```
