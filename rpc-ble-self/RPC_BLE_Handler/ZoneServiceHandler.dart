@@ -142,7 +142,7 @@ class ZoneServiceHandler {
         await stopCsf(parts[1]);
         break;
       default:
-        print('unknown method');
+        print('unknown method, try\n getZoneSettings-uid\n setMode-uid-powerlevel\n setTimer-uid-duration\n setTimerState-uid-state\n setBridged-uid1-uid2\n streamZoneStatusUpdates\n getZoneStatus-uid\n getZoneSettingsAll\n startOrModifyCsf-uid-id-index-type-targetvalue-stepsize-duration-remaining-running-minval-maxval-settings\n stopCsf-uid\n');
         break;
     }
   }

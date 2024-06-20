@@ -76,7 +76,7 @@ void main(List<String> argv) async {
       await zoneServiceHandler.callMethod(methodName);
       break;
     default:
-      print('invalid Service');
+      print('invalid Service, try cooktopService, extractorService, csfService, wifiProvisioningService, debugService, errorService, identifyService, loggingService, zoneService');
       exit(1);
   }
 

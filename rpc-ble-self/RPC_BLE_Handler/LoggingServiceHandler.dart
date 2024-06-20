@@ -47,7 +47,7 @@ class LoggingServiceHandler {
         await listUserEvents();
         break;
       default:
-        print('unknown method');
+        print('unknown method, try \n streamSysEventUpdates \n listSysEvents \n streamUserEventUpdates \n listUserEvents');
     }
   }
 }

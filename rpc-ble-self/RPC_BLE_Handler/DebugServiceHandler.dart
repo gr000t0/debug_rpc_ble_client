@@ -101,7 +101,7 @@ class DebugServiceHandler {
         await deleteWiFiCredentials();
         break;
       default:
-        print('Unknown method');
+        print('Unknown method, try \n getHeartbeatStatus\n deactivateHeartbeat\n activateHeartbeat\n setHeartbeatPeriod-period\n invokeFactoryReset\n restartIoTProvisioning-env\n deleteWifiCredentials\n');
     }
   }
 }

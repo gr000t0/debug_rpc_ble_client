@@ -65,6 +65,9 @@ class CsfServiceHandler {
     } else if (word[0] == 'getSavedCsf') {
       await GetCsf();
     }
+    else{
+      print('unknown method, try\n saveCsf-id-index-type-targetvalue-stepsize-duration-remaining-running-minval-maxval-settings\n getSavedCsf\n');
+    }
   }
 
 

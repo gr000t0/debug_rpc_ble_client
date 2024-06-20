@@ -139,7 +139,7 @@ Future<void> callMethod(String methodName) async {
       await setSpecificCooktopSetting(word[1]);
       break;
     default:
-      print('unknown method');
+      print('unknown method, try \n setChildLock-on/off\n getCooktopSettings\n setPaused-true/false\n getCooktopStatusUpdates\n setSignalVolume-volume\n getCooktopStatus\n setSpecificCooktopSetting-setting\n');
   }
 
 

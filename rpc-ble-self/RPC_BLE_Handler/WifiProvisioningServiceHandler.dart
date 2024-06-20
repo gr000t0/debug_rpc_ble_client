@@ -80,7 +80,7 @@ class WiFiProvisioningServiceHandler {
         await wifiProvisioning(word[1], word[2]);
         break;
       default:
-        print('unknown method');
+        print('unknown method, try\n streamWifiStatus\n streamWifiScan\n getWifiStatus\n wifiProvisioning-ssid-password\n');
         break;
     }
   }

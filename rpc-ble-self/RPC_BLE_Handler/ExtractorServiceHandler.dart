@@ -101,7 +101,7 @@ class ExtractorServiceHandler {
         await streamExtractorStatusUpdates();
         break;
       default:
-        print('unknown method');
+        print('unknown method, try \n getExtractorSettings\n setEggTimer-duration\n setEggTimerState-true/false\n setExtractorMode-powerlevel\n stopAfterRun\n setDurationAfterRun-10/15/20\n getExtractorStatus\n streamExtractorStatusUpdates\n');
     }
   }
 }
