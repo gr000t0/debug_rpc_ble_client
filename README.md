@@ -35,5 +35,5 @@
   ```
 - To save CSF, use:
   ```
-  dart rpc2cm.dart csfService:saveCsf-0-3-100-300000-pasta-1
+  dart rpc2cm.dart csfService:saveCsf-11-3-pasta-100-10-30000-0-false-60-140-1
   ```
