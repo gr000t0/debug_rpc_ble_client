@@ -11,7 +11,7 @@
    ```
    ../tcp_bridge/ python tcp2ble-service.py -m [MAC address of CM] //-d hci0 -p 9000 -a localhost (if needed)
    ```
-3. When connected to the CM, you can use the client by executing:
+3. When connected to the CM, you can use the client by executing in /debug-client/:
    ```
    dart rpc2cm.dart <serviceName>:<method>-<parameter1>-<parameter2>...
    ```
