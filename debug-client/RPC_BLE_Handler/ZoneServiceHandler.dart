@@ -1,9 +1,10 @@
 import 'package:bora_rpc/client.dart';
 import 'package:bora_rpc/gen/bora/generic/csf/v1/csf.pb.dart';
-import 'package:bora_rpc/gen/bora/generic/zone/v1/generic_zone.pbclient.dart';
+import 'package:bora_rpc/gen/bora/generic/zone/v1/generic_zone.pbclient.dart' as generic;
 import 'package:bora_rpc/gen/bora/generic/zone/v1/zone_service.pbclient.dart';
 import 'package:bora_rpc/gen/bora/generic/zone/v1/zone_service.pb.dart';
 import 'package:bora_rpc/gen/bora/generic/generic_definitions.pb.dart';
+import 'package:bora_rpc/gen/bora/pure/zone/v1/pure_zone.pb.dart' as pure;
 
 class ZoneServiceHandler {
   ZoneServiceClient client;
@@ -27,14 +28,57 @@ class ZoneServiceHandler {
     print("Zone Settings back_right: ${response.toString()}");
   }
 
-  Future<void> setMode(String uid, int powerlevel) async {
-  var mode = ZoneMode()..powerLevel = powerlevel; 
-  var request = SetModeRequest(uId: uid, mode: mode);
+  Future<void> setMode(String uid, { String? smode,  int? powerlevel, String? heatRetentionMode} ) async {
+  
+  var request; 
+  
+  if(smode == null && powerlevel != null){
+  var mode = generic.ZoneMode();
+  mode.powerLevel = powerlevel;
+  
+  request = SetModeRequest(uId: uid, mode: mode);
+  }
+
+  else if(smode == 'heatRetention' && heatRetentionMode != null){
+    var mode = generic.ZoneMode();
+    var pureMode = pure.ZoneMode();
+      switch(heatRetentionMode){
+        case 'melting':
+          pureMode.heatRetention = pure.HeatRetention()..mode = pure.HeatRetention_Modes.MODES_LEVEL_MELTING;
+          
+          break;
+        case 'keepWarm':
+          pureMode.heatRetention = pure.HeatRetention()..mode = pure.HeatRetention_Modes.MODES_LEVEL_KEEP_WARM;
+          
+          break;
+
+        case 'simmering':
+          pureMode.heatRetention = pure.HeatRetention()..mode = pure.HeatRetention_Modes.MODES_LEVEL_SIMMERING;
+          
+          break;
+        default:
+          pureMode.heatRetention = pure.HeatRetention()..mode = pure.HeatRetention_Modes.MODES_UNSPECIFIED;
+          break;
+      }
+      mode.pure = pureMode;
+      request = SetModeRequest(uId: uid, mode: mode);
+
+  }
+   else if(smode == 'heatUp' && powerlevel != null){
+      var mode = generic.ZoneMode();
+      var pureMode = pure.ZoneMode();
+      pureMode.heatUp = pure.HeatUpMode()..powerLevel = powerlevel;
+      mode.pure = pureMode;
+      request = SetModeRequest(uId: uid, mode: mode);
+
+    }
   
     var response = await client.setMode(request, RequestOptions(headers: {}));
     print("Set Mode Response: ${response.toString()}");
 
-}
+
+  }
+
 
   Future<void> setTimer(String uid, int duration) async {
     var request = SetTimerRequest(uId: uid, duration: duration);
@@ -114,9 +158,23 @@ class ZoneServiceHandler {
       case 'getZoneSettings':
         await getZoneSettings(parts[1]);
         break;
-      case 'setMode':
-        await setMode(parts[1], int.parse(parts[2]));
-        break;
+      case 'setMode': {
+         if (parts.length == 3) {
+        // Aufruf: setMode-uid-powerlevel
+        await setMode(parts[1], powerlevel: int.parse(parts[2]));
+      } else if (parts.length == 4) {
+        // Unterscheidung zwischen setMode-uid-mode-powerlevel und setMode-uid-mode-heatRetentionMode
+        if (int.tryParse(parts[3]) != null) {
+          // Aufruf: setMode-uid-mode-powerlevel
+          await setMode(parts[1], smode: parts[2], powerlevel: int.parse(parts[3]));
+        } else {
+          // Aufruf: setMode-uid-mode-heatRetentionMode
+          await setMode(parts[1], smode: parts[2], heatRetentionMode: parts[3]);
+        }
+      } else {
+        print('Invalid setMode call');
+      } 
+      }break;
       case 'setTimer':
         await setTimer(parts[1], int.parse(parts[2]));
         break;
@@ -146,4 +204,5 @@ class ZoneServiceHandler {
         break;
     }
   }
+
 }
