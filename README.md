@@ -1,17 +1,43 @@
 # debug_rpc_ble_client
 
+## Simple implementation of BORA-RPC-Protocol as Client
 
+### How to use:
+1. Assure that the CM is already paired with your Linux system by executing the following command in a terminal:
+   ```
+   bluetoothctl pair [MAC address of CM]
+   ```
+2. Start the TCP-to-BLE bridge by executing:
+   ```
+   ../tcp_bridge/ python tcp2ble-service.py -m [MAC address of CM] //-d hci0 -p 9000 -a localhost (if needed)
+   ```
+3. When connected to the CM, you can use the client by executing in /debug-client/:
+   ```
+   dart rpc2cm.dart <serviceName>:<method>-<parameter1>-<parameter2>...
+   ```
+   Discover usage by:
+   - `dart rpc2cm.dart service:help`
+   - `<serviceName>:help`
 
-simple implementation of BORA-RPC-Protocol as Client:
+### Naming Conventions:
+- Use camelCase for every term.
+- Services are the different RPC services like `cooktopService`.
+- Methods are the RPC calls in the mentioned services.
 
-how to use:
-assure that the CM is allready paired with your linux-system by executing "bluetoothctl pair [MAC adress of CM]" in a terminal 
-start the tcp-to-ble bridge by executing ../tcp_bridge/ python tcp2ble-service.py -m [MAC adress of CM] -d hci0 -p 9000 -a localhost
-when connected to the CM you can use the client by executing dart main.dart <servicename>:<method>-<parameter1>-<parameter2>...
-use camelCase for every term, services are the different rpc-services like cooktopService, and the methods are the rpc-Calls in the mentioned services for example:
-to get CookTopstatus type:
-dart main.dart cooktopService:getCooktopStatus
-to set childlock type:
-dart main.dart cooktopSercice:setChildLock-on
-to save Csf use:
-dart main.dart csfService:saveCsf-0-3-100-300000-pasta-1 and so on....
+### Examples:
+- To get CookTop status, type:
+  ```
+  dart rpc2cm.dart cooktopService:getCooktopStatus
+  ```
+- To set child lock, type:
+  ```
+  dart rpc2cm.dart cooktopService:setChildLock-on
+  ```
+- To save CSF, use:
+  ```
+  dart rpc2cm.dart csfService:saveCsf-11-3-pasta-100-10-30000-0-false-60-140-1
+  ```
+- To start CSF, use:
+  ```
+  dart rpc2cm.dart zoneService:startOrModifyCsf-front_right-11-3-pasta-100-10-30000-0-false-60-140-1
+  ```
