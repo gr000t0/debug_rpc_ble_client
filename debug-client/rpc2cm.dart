@@ -75,6 +75,9 @@ void main(List<String> argv) async {
       var zoneServiceHandler = ZoneServiceHandler(connection);
       await zoneServiceHandler.callMethod(methodName);
       break;
+    case 'service':
+      print('avaliable services: cooktopService, extractorService, csfService, wifiProvisioningService, debugService, errorService, identifyService, loggingService, zoneService');
+      break;
     default:
       print('invalid Service, try cooktopService, extractorService, csfService, wifiProvisioningService, debugService, errorService, identifyService, loggingService, zoneService');
       exit(1);

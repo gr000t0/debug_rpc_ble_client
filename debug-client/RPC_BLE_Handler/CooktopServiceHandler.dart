@@ -138,6 +138,9 @@ Future<void> callMethod(String methodName) async {
     case 'setSpecificCooktopSetting':
       await setSpecificCooktopSetting(word[1]);
       break;
+    case 'help':
+      print('Methods: \n setChildLock-on/off\n getCooktopSettings\n setPaused-true/false\n getCooktopStatusUpdates\n setSignalVolume-volume\n getCooktopStatus\n setSpecificCooktopSetting-setting\n');
+      break;
     default:
       print('unknown method, try \n setChildLock-on/off\n getCooktopSettings\n setPaused-true/false\n getCooktopStatusUpdates\n setSignalVolume-volume\n getCooktopStatus\n setSpecificCooktopSetting-setting\n');
   }

@@ -40,6 +40,9 @@ Future<void> callMethod(String methodName) async {
     case 'sendError':
       await sendError(word.sublist(1));
       break;
+    case 'help':
+      print('Methods: \n sendError-[error1]-[error2]-[error3]...');
+      break;
     default:
       print('Method not found: Usage sendError-[error1]-[error2]-[error3]...');
   }

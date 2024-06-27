@@ -100,6 +100,9 @@ class DebugServiceHandler {
       case 'deleteWifiCredentials':
         await deleteWiFiCredentials();
         break;
+      case 'help':
+        print('Methods: \n getHeartbeatStatus\n deactivateHeartbeat\n activateHeartbeat\n setHeartbeatPeriod-period\n invokeFactoryReset\n restartIoTProvisioning-env\n deleteWifiCredentials\n');
+        break;
       default:
         print('Unknown method, try \n getHeartbeatStatus\n deactivateHeartbeat\n activateHeartbeat\n setHeartbeatPeriod-period\n invokeFactoryReset\n restartIoTProvisioning-env\n deleteWifiCredentials\n');
     }

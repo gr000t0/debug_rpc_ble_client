@@ -76,7 +76,7 @@ class ZoneServiceHandler {
     var response = await client.setMode(request, RequestOptions(headers: {}));
     print("Set Mode Response: ${response.toString()}");
 
-
+    
   }
 
 
@@ -199,8 +199,11 @@ class ZoneServiceHandler {
       case 'stopCsf':
         await stopCsf(parts[1]);
         break;
+      case 'help':
+        print('Methods: \n getZoneSettings-uid\n setMode-uid-powerlevel / setMode-\'heatup\'-powerlevel / setMode-\'heatRetention\'-heatRetentionMode (melting, keepWarm, simmering\n setTimer-uid-duration\n setTimerState-uid-state\n setBridged-uid1-uid2\n streamZoneStatusUpdates\n getZoneStatus-uid\n getZoneSettingsAll\n startOrModifyCsf-uid-id-index-type-targetvalue-stepsize-duration-remaining-running-minval-maxval-settings\n stopCsf-uid\n');
+        break;
       default:
-        print('unknown method, try\n getZoneSettings-uid\n setMode-uid-powerlevel\n setTimer-uid-duration\n setTimerState-uid-state\n setBridged-uid1-uid2\n streamZoneStatusUpdates\n getZoneStatus-uid\n getZoneSettingsAll\n startOrModifyCsf-uid-id-index-type-targetvalue-stepsize-duration-remaining-running-minval-maxval-settings\n stopCsf-uid\n');
+        print('unknown method, try\n getZoneSettings-uid\n setMode-uid-powerlevel / setMode-\'heatup\'-powerlevel / setMode-\'heatRetention\'-heatRetentionMode (melting, keepWarm, simmering\n setTimer-uid-duration\n setTimerState-uid-state\n setBridged-uid1-uid2\n streamZoneStatusUpdates\n getZoneStatus-uid\n getZoneSettingsAll\n startOrModifyCsf-uid-id-index-type-targetvalue-stepsize-duration-remaining-running-minval-maxval-settings\n stopCsf-uid\n');
         break;
     }
   }

@@ -79,6 +79,9 @@ class WiFiProvisioningServiceHandler {
       case 'wifiProvisioning':
         await wifiProvisioning(word[1], word[2]);
         break;
+      case 'help':
+        print('Methods:\n streamWifiStatus\n streamWifiScan\n getWifiStatus\n wifiProvisioning-ssid-password\n');
+        break;
       default:
         print('unknown method, try\n streamWifiStatus\n streamWifiScan\n getWifiStatus\n wifiProvisioning-ssid-password\n');
         break;

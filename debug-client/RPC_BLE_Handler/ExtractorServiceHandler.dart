@@ -100,6 +100,9 @@ class ExtractorServiceHandler {
       case 'streamExtractorStatusUpdates':
         await streamExtractorStatusUpdates();
         break;
+      case 'help':
+        print('Methods: \n getExtractorSettings\n setEggTimer-duration\n setEggTimerState-true/false\n setExtractorMode-powerlevel\n stopAfterRun\n setDurationAfterRun-10/15/20\n getExtractorStatus\n streamExtractorStatusUpdates\n');
+        break;
       default:
         print('unknown method, try \n getExtractorSettings\n setEggTimer-duration\n setEggTimerState-true/false\n setExtractorMode-powerlevel\n stopAfterRun\n setDurationAfterRun-10/15/20\n getExtractorStatus\n streamExtractorStatusUpdates\n');
     }

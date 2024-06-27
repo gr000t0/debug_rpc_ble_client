@@ -46,6 +46,9 @@ class LoggingServiceHandler {
       case 'listUserEvents':
         await listUserEvents();
         break;
+      case 'help':
+        print('Methods: \n streamSysEventUpdates \n listSysEvents \n streamUserEventUpdates \n listUserEvents');
+        break;
       default:
         print('unknown method, try \n streamSysEventUpdates \n listSysEvents \n streamUserEventUpdates \n listUserEvents');
     }

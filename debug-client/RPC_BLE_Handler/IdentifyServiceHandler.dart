@@ -43,6 +43,9 @@ class IdentifyServiceHandler {
       case 'getSystemValueRangeDescriptor':
         await getSystemValueRangeDescriptor();
         break;
+      case 'help':
+        print('Methods: \n getSystemInformation \n getSystemValueRangeDescriptor');
+        break;
       default:
         print('unknown method, try \n getSystemInformation \n getSystemValueRangeDescriptor');
     }
