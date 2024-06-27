@@ -109,10 +109,15 @@ class CsfServiceHandler {
     csfParameter.csfTargetMaxVal = maxval;
     csfParameter.csfSettings = settings;
 
-    client.saveCsf(SaveCsfRequest(csfParameter: [csfParameter]), RequestOptions(headers: {}));
+    var responsePre = await client.getSavedCsf(GetSavedCsfRequest(), RequestOptions(headers: {}));
+    List<CsfParameter> csfListIn = responsePre.csfParameter;
+    csfListIn.add(csfParameter);
+    
+
+    client.saveCsf(SaveCsfRequest(csfParameter: csfListIn), RequestOptions(headers: {}));
     //var response = await client.saveCsf(SaveCsfRequest(csfParameter: [csfParameter]), RequestOptions(headers: {}));
     //print(response.toString());
-    await Future.delayed(Duration(seconds: 20)); // wait for comfirmation
+    await Future.delayed(Duration(seconds: 10)); // wait for comfirmation
     print('Saved Csf');
     
     var response = await client.getSavedCsf(GetSavedCsfRequest(), RequestOptions(headers: {}));
