@@ -27,7 +27,7 @@ class CsfServiceHandler {
     client.saveCsf(SaveCsfRequest(csfParameter: csfList), RequestOptions(headers: {}));
     //var response = await client.saveCsf(SaveCsfRequest(csfParameter: [csfParameter]), RequestOptions(headers: {}));
     //print(response.toString());
-    await Future.delayed(Duration(seconds: 20)); // wait for comfirmation
+    await Future.delayed(Duration(seconds: 10)); // wait for comfirmation
     print('Saved Csf');
     
     var response = await client.getSavedCsf(GetSavedCsfRequest(), RequestOptions(headers: {}));

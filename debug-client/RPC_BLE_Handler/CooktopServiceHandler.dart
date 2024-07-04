@@ -2,6 +2,7 @@ import 'package:bora_rpc/client.dart';
 import 'package:bora_rpc/gen/bora/generic/cooktop/v1/cooktop_service.pbclient.dart';
 import 'package:bora_rpc/gen/bora/generic/cooktop/v1/generic_cooktop.pb.dart';
 import 'package:bora_rpc/gen/bora/pure/cooktop/v1/pure_cooktop.pb.dart';
+import 'package:bora_rpc/src/client/call.dart';
 
 
 
@@ -93,6 +94,7 @@ class CooktopServiceHandler {
 }
 
 Future<void> getCooktopStatusUpdates () async {
+  
   await for  (var response in client.streamCooktopStatusUpdates(StreamCooktopStatusUpdatesRequest(), RequestOptions(headers: {}))){
   print(response.toString()); }
 }
@@ -103,6 +105,8 @@ Future<void> setSignalVolume(int volume) async {
 }
 
 Future<void> getCooktopStatus() async {
+  
+  
   var response = await client.getCooktopStatus(GetCooktopStatusRequest(), RequestOptions(headers: {}));
   print(response.toString());
   print("CooktopSettings: " + response.cooktopSettings.toString());
@@ -112,6 +116,9 @@ Future<void> getCooktopStatus() async {
   print("currentPrimaryDevicErrors: " + response.currentPrimaryDeviceErrors.toString());
 
 }
+
+
+
 
 
 Future<void> callMethod(String methodName) async {

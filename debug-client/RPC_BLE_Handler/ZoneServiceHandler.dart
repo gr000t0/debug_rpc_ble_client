@@ -5,11 +5,22 @@ import 'package:bora_rpc/gen/bora/generic/zone/v1/zone_service.pbclient.dart';
 import 'package:bora_rpc/gen/bora/generic/zone/v1/zone_service.pb.dart';
 import 'package:bora_rpc/gen/bora/generic/generic_definitions.pb.dart';
 import 'package:bora_rpc/gen/bora/pure/zone/v1/pure_zone.pb.dart' as pure;
+import 'dart:io';
 
 class ZoneServiceHandler {
   ZoneServiceClient client;
 
   ZoneServiceHandler(Connection connection) : client = ZoneServiceClient(connection) {}
+
+
+  Future<void> monitorUserInput() async {
+    print('Drücken Sie Enter, um die Schleife zu beenden.');
+    var stream = client.streamZoneStatusUpdates(StreamZoneStatusUpdatesRequest(), RequestOptions(headers: {}));
+    await stdin.first; // 
+    stream.cancel();
+    print("Cancel stream...");
+   
+    }
 
   Future<void> getZoneSettings(String uid) async {
     var response = await client.getZoneSettings(GetZoneSettingsRequest(uId: uid), RequestOptions(headers: {}));
@@ -99,6 +110,7 @@ class ZoneServiceHandler {
   }
 
   Future<void> streamZoneStatusUpdates() async {
+    monitorUserInput();
     await for (var response in client.streamZoneStatusUpdates(StreamZoneStatusUpdatesRequest(), RequestOptions(headers: {}))) {
       print("Zone Status Update: ${response.toString()}");
     }
@@ -200,10 +212,10 @@ class ZoneServiceHandler {
         await stopCsf(parts[1]);
         break;
       case 'help':
-        print('Methods: \n getZoneSettings-uid\n setMode-uid-powerlevel / setMode-\'heatup\'-powerlevel / setMode-\'heatRetention\'-heatRetentionMode (melting, keepWarm, simmering\n setTimer-uid-duration\n setTimerState-uid-state\n setBridged-uid1-uid2\n streamZoneStatusUpdates\n getZoneStatus-uid\n getZoneSettingsAll\n startOrModifyCsf-uid-id-index-type-targetvalue-stepsize-duration-remaining-running-minval-maxval-settings\n stopCsf-uid\n');
+        print('Methods: \n getZoneSettings-uid\n setMode-uid-powerlevel / setMode-uid-\'heatup\'-powerlevel / setMode-uid-\'heatRetention\'-heatRetentionMode (melting, keepWarm, simmering)\n setTimer-uid-duration\n setTimerState-uid-state\n setBridged-uid1-uid2\n streamZoneStatusUpdates\n getZoneStatus-uid\n getZoneSettingsAll\n startOrModifyCsf-uid-id-index-type-targetvalue-stepsize-duration-remaining-running-minval-maxval-settings\n stopCsf-uid\n');
         break;
       default:
-        print('unknown method, try\n getZoneSettings-uid\n setMode-uid-powerlevel / setMode-\'heatup\'-powerlevel / setMode-\'heatRetention\'-heatRetentionMode (melting, keepWarm, simmering\n setTimer-uid-duration\n setTimerState-uid-state\n setBridged-uid1-uid2\n streamZoneStatusUpdates\n getZoneStatus-uid\n getZoneSettingsAll\n startOrModifyCsf-uid-id-index-type-targetvalue-stepsize-duration-remaining-running-minval-maxval-settings\n stopCsf-uid\n');
+        print('unknown method, try\n getZoneSettings-uid\n setMode-uid-powerlevel / setMode-uid-\'heatup\'-powerlevel / setMode-uid-\'heatRetention\'-heatRetentionMode (melting, keepWarm, simmering)\n setTimer-uid-duration\n setTimerState-uid-state\n setBridged-uid1-uid2\n streamZoneStatusUpdates\n getZoneStatus-uid\n getZoneSettingsAll\n startOrModifyCsf-uid-id-index-type-targetvalue-stepsize-duration-remaining-running-minval-maxval-settings\n stopCsf-uid\n');
         break;
     }
   }

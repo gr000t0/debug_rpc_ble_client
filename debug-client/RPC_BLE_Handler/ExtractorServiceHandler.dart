@@ -1,13 +1,28 @@
+import 'dart:async';
+
 import 'package:bora_rpc/client.dart';
 import 'package:bora_rpc/gen/bora/generic/extractor/v1/extractor_service.pbclient.dart';
 import 'package:bora_rpc/gen/bora/generic/extractor/v1/generic_extractor.pb.dart';
-import 'package:bora_rpc/gen/bora/generic/generic_definitions.pbjson.dart';
+
 import 'package:bora_rpc/gen/bora/pure/extractor/v1/pure_extractor.pb.dart';
+import 'dart:io';
 
 class ExtractorServiceHandler {
   ExtractorServiceClient client;
+  bool runLoop = true;
 
   ExtractorServiceHandler(Connection connection) : client = ExtractorServiceClient(connection) {}
+
+
+   Future<void> monitorUserInput() async {
+    print('Drücken Sie Enter, um die Schleife zu beenden.');
+    var stream = client.streamExtractorStatusUpdates(StreamExtractorStatusUpdatesRequest(), RequestOptions(headers: {}));
+    await stdin.first; 
+    stream.cancel();
+    
+    print("Cancel stream...");
+    
+    }
 
   Future<void> getExtractorSettings() async {
     var response = await client.getExtractorSettings(GetExtractorSettingsRequest(), RequestOptions(headers: {}));
@@ -42,6 +57,7 @@ class ExtractorServiceHandler {
   Future<void> setDurationAfterRun(AfterRunDuration afterRunDuration) async {
     var response = await client.setDurationAfterRun(SetDurationAfterRunRequest(afterRunDuration: afterRunDuration), RequestOptions(headers: {}));
     print(response.toString());
+    
   }
 
   Future<void> getExtractorStatus() async {
@@ -51,9 +67,17 @@ class ExtractorServiceHandler {
   }
 
   Future<void> streamExtractorStatusUpdates() async {
+
+    monitorUserInput();
+
     await for (var response in client.streamExtractorStatusUpdates(StreamExtractorStatusUpdatesRequest(), RequestOptions(headers: {}))) {
-      print(response.toString());
+      print("Extractor Status Update: ${response.toString()}");
+      
+      
     }
+
+    
+    
   }
 
 
