@@ -77,9 +77,14 @@ class TcpConnection:
   def send_from_queue(self):
     try: 
       data = self.queue.get_nowait()
+      hex_response = "7E1801221b0a1710030a17100318042a11180228023202120038a8464204080110033a030a012d990FF1497C"
+                              
+      #data = bytes.fromhex(hex_response)
       # connection errors will be handled on upper level
-      self.connection.sendall(data) 
+      self.connection.sendall(data)
+      hex_data = data.hex() 
       log.info(f'forward {len(data)} bytes to tcp')
+      log.info(f'Data hex TCP: {hex_data}')
     except queue.Empty:
       # if queue was empty just do nothing
       pass
@@ -153,7 +158,9 @@ class BleThread(threading.Thread):
               try:
                 if self.ble_device is not None:
                   self.ble_device.char_write(self.uuid_write_characteristic, data)
+                  hex_data = data.hex()
                   log.info(f"forward {len(data)} bytes to ble")
+                  log.info(f'Data hex BLE: {hex_data}')
               except BaseException as err:
                 log.debug(f"{type(err).__name__}: {err}")
                 self.ble_device = None

@@ -47,29 +47,6 @@ class DebugServiceHandler {
     print("factoryResteDone: "+response.factoryResetDone.toString());
   }
 
-  Future<void> restartIoTProvisioning(String env) async {
-    var request = RestartIoTProvisioningRequest();
-    switch(env){
-      case 'CLOUD_ENVIRONMENT_EU_DEV':
-        request.cloudEnvironment = CloudEnvironment.CLOUD_ENVIRONMENT_EU_DEV;
-        break;
-      case 'CLOUD_ENVIRONMENT_EU_PROD':
-        request.cloudEnvironment = CloudEnvironment.CLOUD_ENVIRONMENT_EU_PROD;
-        break;
-      case 'CLOUD_ENVIRONMENT_EU_STG':
-        request.cloudEnvironment = CloudEnvironment.CLOUD_ENVIRONMENT_EU_STG;
-        break;
-      case 'CLOUD_ENVIRONMENT_UNSPECIFIED':
-        request.cloudEnvironment = CloudEnvironment.CLOUD_ENVIRONMENT_UNSPECIFIED;
-        break;
-      default:
-        print("available environments are: CLOUD_ENVIRONMENT_EU_DEV, CLOUD_ENVIRONMENT_EU_PROD, CLOUD_ENVIRONMENT_EU_STG, CLOUD_ENVIRONMENT_UNSPECIFIED");
-        break;
-    }
-    
-    var response = await client.restartIoTProvisioning(request, RequestOptions(headers: {}));
-    print("RestartIoTProvisioningDone: "+response.restartProvisioningDone.toString());
-  }
 
   Future<void> deleteWiFiCredentials() async {
     var response = await client.deleteWiFiCredentials(DeleteWiFiCredentialsRequest(), RequestOptions(headers: {}));
@@ -93,9 +70,6 @@ class DebugServiceHandler {
         break;
       case 'invokeFactoryReset':
         await invokeFactoryReset();
-        break;
-      case 'restartIoTProvisioning':
-        await restartIoTProvisioning(word[1]);
         break;
       case 'deleteWifiCredentials':
         await deleteWiFiCredentials();

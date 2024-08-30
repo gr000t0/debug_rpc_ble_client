@@ -17,7 +17,6 @@ abstract class DebugServiceBase extends $rpc.ServiceServer {
   $async.Future<$0.HeartbeatStatusResponse> activateHeartbeat($rpc.Context ctx, $0.ActivateHeartbeatRequest request);
   $async.Future<$0.HeartbeatStatusResponse> setHeartbeatPeriod($rpc.Context ctx, $0.SetHeartbeatPeriodRequest request);
   $async.Future<$0.FactoryResetStatusResponse> invokeFactoryReset($rpc.Context ctx, $0.InvokeFactoryResetRequest request);
-  $async.Future<$0.RestartIoTProvisioningResponse> restartIoTProvisioning($rpc.Context ctx, $0.RestartIoTProvisioningRequest request);
   $async.Future<$0.DeleteWiFiCredentialsResponse> deleteWiFiCredentials($rpc.Context ctx, $0.DeleteWiFiCredentialsRequest request);
 
   @override
@@ -56,13 +55,6 @@ abstract class DebugServiceBase extends $rpc.ServiceServer {
         (res) => res.writeToBuffer(),
         false, false,
         invokeFactoryReset,
-    ),
-    $rpc.Method<$0.RestartIoTProvisioningRequest, $0.RestartIoTProvisioningResponse>(
-        '/bora.generic.debug.v1.DebugService/RestartIoTProvisioning',
-        (req) => $0.RestartIoTProvisioningRequest.fromBuffer(req),
-        (res) => res.writeToBuffer(),
-        false, false,
-        restartIoTProvisioning,
     ),
     $rpc.Method<$0.DeleteWiFiCredentialsRequest, $0.DeleteWiFiCredentialsResponse>(
         '/bora.generic.debug.v1.DebugService/DeleteWiFiCredentials',

@@ -127,9 +127,37 @@ class Connection {
     log.finer('connection state set to $state');
   }
 
-  void _receiveResponse(List<int> bytes) {
-    var response = proto.Response.fromBuffer(bytes);
+  List<int> hexStringWithSpacesToByteArray(String hexString) {
+  // Teile den Hex-String anhand der Leerzeichen
+  List<String> hexParts = hexString.split(' ');
 
+  // Leere Liste für Bytes erstellen
+  List<int> bytes = [];
+
+  // Konvertiere jede Hex-Zahl in ein Byte und füge sie der Liste hinzu
+  for (String hexPart in hexParts) {
+    if (hexPart.isNotEmpty) {
+      int byte = int.parse(hexPart, radix: 16);
+      bytes.add(byte);
+    }
+  }
+
+  return bytes;
+}
+
+  void _receiveResponse(List<int> bytes) {
+    //enter test hex here
+    List<int> byteList = hexStringWithSpacesToByteArray('18 e6 a1 ec fe 0a 22 1e 0a 17 10 03 18 04 2a 11 18 02 28 02 32 02 12 00 38 a8 46 42 04 08 01 10 03 2a 02 08 29 3a 03 0a 01 2d 38 01');
+    //uncomment to test hex:
+     /*
+      print("bytes: " + bytes.toString());
+      print("byteList: " + byteList.toString());
+      var response = proto.Response.fromBuffer(byteList);
+      print("RequestID: ${response.requestId}");
+      response.requestId = 1;
+    // */
+    // comment out next line to test hex
+     var response = proto.Response.fromBuffer(bytes);
     var call = _pendingCalls[response.requestId];
     if (call == null) {
       log.fine('no call found for id ${response.requestId}');

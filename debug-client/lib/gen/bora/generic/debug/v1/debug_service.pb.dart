@@ -10,10 +10,6 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'debug_service.pbenum.dart';
-
-export 'debug_service.pbenum.dart';
-
 class GetHeartbeatStatusRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'GetHeartbeatStatusRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'bora.generic.debug.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
@@ -299,100 +295,6 @@ class FactoryResetStatusResponse extends $pb.GeneratedMessage {
   void clearFactoryResetDone() => clearField(1);
 }
 
-class RestartIoTProvisioningRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'RestartIoTProvisioningRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'bora.generic.debug.v1'), createEmptyInstance: create)
-    ..e<CloudEnvironment>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cloudEnvironment', $pb.PbFieldType.OE, protoName: 'cloudEnvironment', defaultOrMaker: CloudEnvironment.CLOUD_ENVIRONMENT_UNSPECIFIED, valueOf: CloudEnvironment.valueOf, enumValues: CloudEnvironment.values)
-    ..hasRequiredFields = false
-  ;
-
-  RestartIoTProvisioningRequest._() : super();
-  factory RestartIoTProvisioningRequest({
-    CloudEnvironment? cloudEnvironment,
-  }) {
-    final _result = create();
-    if (cloudEnvironment != null) {
-      _result.cloudEnvironment = cloudEnvironment;
-    }
-    return _result;
-  }
-  factory RestartIoTProvisioningRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory RestartIoTProvisioningRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  RestartIoTProvisioningRequest clone() => RestartIoTProvisioningRequest()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  RestartIoTProvisioningRequest copyWith(void Function(RestartIoTProvisioningRequest) updates) => super.copyWith((message) => updates(message as RestartIoTProvisioningRequest)) as RestartIoTProvisioningRequest; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static RestartIoTProvisioningRequest create() => RestartIoTProvisioningRequest._();
-  RestartIoTProvisioningRequest createEmptyInstance() => create();
-  static $pb.PbList<RestartIoTProvisioningRequest> createRepeated() => $pb.PbList<RestartIoTProvisioningRequest>();
-  @$core.pragma('dart2js:noInline')
-  static RestartIoTProvisioningRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RestartIoTProvisioningRequest>(create);
-  static RestartIoTProvisioningRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  CloudEnvironment get cloudEnvironment => $_getN(0);
-  @$pb.TagNumber(1)
-  set cloudEnvironment(CloudEnvironment v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasCloudEnvironment() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearCloudEnvironment() => clearField(1);
-}
-
-class RestartIoTProvisioningResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'RestartIoTProvisioningResponse', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'bora.generic.debug.v1'), createEmptyInstance: create)
-    ..aOB(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'restartProvisioningDone', protoName: 'restartProvisioningDone')
-    ..hasRequiredFields = false
-  ;
-
-  RestartIoTProvisioningResponse._() : super();
-  factory RestartIoTProvisioningResponse({
-    $core.bool? restartProvisioningDone,
-  }) {
-    final _result = create();
-    if (restartProvisioningDone != null) {
-      _result.restartProvisioningDone = restartProvisioningDone;
-    }
-    return _result;
-  }
-  factory RestartIoTProvisioningResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory RestartIoTProvisioningResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  RestartIoTProvisioningResponse clone() => RestartIoTProvisioningResponse()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  RestartIoTProvisioningResponse copyWith(void Function(RestartIoTProvisioningResponse) updates) => super.copyWith((message) => updates(message as RestartIoTProvisioningResponse)) as RestartIoTProvisioningResponse; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static RestartIoTProvisioningResponse create() => RestartIoTProvisioningResponse._();
-  RestartIoTProvisioningResponse createEmptyInstance() => create();
-  static $pb.PbList<RestartIoTProvisioningResponse> createRepeated() => $pb.PbList<RestartIoTProvisioningResponse>();
-  @$core.pragma('dart2js:noInline')
-  static RestartIoTProvisioningResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RestartIoTProvisioningResponse>(create);
-  static RestartIoTProvisioningResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.bool get restartProvisioningDone => $_getBF(0);
-  @$pb.TagNumber(1)
-  set restartProvisioningDone($core.bool v) { $_setBool(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasRestartProvisioningDone() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearRestartProvisioningDone() => clearField(1);
-}
-
 class DeleteWiFiCredentialsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'DeleteWiFiCredentialsRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'bora.generic.debug.v1'), createEmptyInstance: create)
     ..hasRequiredFields = false
@@ -492,10 +394,6 @@ class DebugServiceApi {
   $async.Future<FactoryResetStatusResponse> invokeFactoryReset($pb.ClientContext? ctx, InvokeFactoryResetRequest request) {
     var emptyResponse = FactoryResetStatusResponse();
     return _client.invoke<FactoryResetStatusResponse>(ctx, 'DebugService', 'InvokeFactoryReset', request, emptyResponse);
-  }
-  $async.Future<RestartIoTProvisioningResponse> restartIoTProvisioning($pb.ClientContext? ctx, RestartIoTProvisioningRequest request) {
-    var emptyResponse = RestartIoTProvisioningResponse();
-    return _client.invoke<RestartIoTProvisioningResponse>(ctx, 'DebugService', 'RestartIoTProvisioning', request, emptyResponse);
   }
   $async.Future<DeleteWiFiCredentialsResponse> deleteWiFiCredentials($pb.ClientContext? ctx, DeleteWiFiCredentialsRequest request) {
     var emptyResponse = DeleteWiFiCredentialsResponse();

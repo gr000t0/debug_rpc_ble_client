@@ -60,12 +60,14 @@ const CooktopStatus$json = const {
     const {'1': 'readyForSleep', '3': 2, '4': 1, '5': 8, '10': 'readyForSleep'},
     const {'1': 'primaryDeviceFactoryReset', '3': 3, '4': 1, '5': 8, '10': 'primaryDeviceFactoryReset'},
     const {'1': 'primaryDeviceRestart', '3': 4, '4': 1, '5': 8, '10': 'primaryDeviceRestart'},
-    const {'1': 'currentPrimaryDeviceErrors', '3': 5, '4': 1, '5': 11, '6': '.bora.generic.cooktop.v1.Errors', '10': 'currentPrimaryDeviceErrors'},
+    const {'1': 'primaryDeviceSendConnectStateReq', '3': 5, '4': 1, '5': 8, '10': 'primaryDeviceSendConnectStateReq'},
+    const {'1': 'recoveryStateActive', '3': 6, '4': 1, '5': 8, '10': 'recoveryStateActive'},
+    const {'1': 'currentPrimaryDeviceErrors', '3': 7, '4': 1, '5': 11, '6': '.bora.generic.cooktop.v1.Errors', '10': 'currentPrimaryDeviceErrors'},
   ],
 };
 
 /// Descriptor for `CooktopStatus`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List cooktopStatusDescriptor = $convert.base64Decode('Cg1Db29rdG9wU3RhdHVzElIKD2Nvb2t0b3BTZXR0aW5ncxgBIAEoCzIoLmJvcmEuZ2VuZXJpYy5jb29rdG9wLnYxLkNvb2t0b3BTZXR0aW5nc1IPY29va3RvcFNldHRpbmdzEiQKDXJlYWR5Rm9yU2xlZXAYAiABKAhSDXJlYWR5Rm9yU2xlZXASPAoZcHJpbWFyeURldmljZUZhY3RvcnlSZXNldBgDIAEoCFIZcHJpbWFyeURldmljZUZhY3RvcnlSZXNldBIyChRwcmltYXJ5RGV2aWNlUmVzdGFydBgEIAEoCFIUcHJpbWFyeURldmljZVJlc3RhcnQSXwoaY3VycmVudFByaW1hcnlEZXZpY2VFcnJvcnMYBSABKAsyHy5ib3JhLmdlbmVyaWMuY29va3RvcC52MS5FcnJvcnNSGmN1cnJlbnRQcmltYXJ5RGV2aWNlRXJyb3Jz');
+final $typed_data.Uint8List cooktopStatusDescriptor = $convert.base64Decode('Cg1Db29rdG9wU3RhdHVzElIKD2Nvb2t0b3BTZXR0aW5ncxgBIAEoCzIoLmJvcmEuZ2VuZXJpYy5jb29rdG9wLnYxLkNvb2t0b3BTZXR0aW5nc1IPY29va3RvcFNldHRpbmdzEiQKDXJlYWR5Rm9yU2xlZXAYAiABKAhSDXJlYWR5Rm9yU2xlZXASPAoZcHJpbWFyeURldmljZUZhY3RvcnlSZXNldBgDIAEoCFIZcHJpbWFyeURldmljZUZhY3RvcnlSZXNldBIyChRwcmltYXJ5RGV2aWNlUmVzdGFydBgEIAEoCFIUcHJpbWFyeURldmljZVJlc3RhcnQSSgogcHJpbWFyeURldmljZVNlbmRDb25uZWN0U3RhdGVSZXEYBSABKAhSIHByaW1hcnlEZXZpY2VTZW5kQ29ubmVjdFN0YXRlUmVxEjAKE3JlY292ZXJ5U3RhdGVBY3RpdmUYBiABKAhSE3JlY292ZXJ5U3RhdGVBY3RpdmUSXwoaY3VycmVudFByaW1hcnlEZXZpY2VFcnJvcnMYByABKAsyHy5ib3JhLmdlbmVyaWMuY29va3RvcC52MS5FcnJvcnNSGmN1cnJlbnRQcmltYXJ5RGV2aWNlRXJyb3Jz');
 @$core.Deprecated('Use errorsDescriptor instead')
 const Errors$json = const {
   '1': 'Errors',

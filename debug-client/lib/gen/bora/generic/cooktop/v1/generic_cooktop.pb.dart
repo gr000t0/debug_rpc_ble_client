@@ -140,7 +140,9 @@ class CooktopStatus extends $pb.GeneratedMessage {
     ..aOB(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'readyForSleep', protoName: 'readyForSleep')
     ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'primaryDeviceFactoryReset', protoName: 'primaryDeviceFactoryReset')
     ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'primaryDeviceRestart', protoName: 'primaryDeviceRestart')
-    ..aOM<Errors>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentPrimaryDeviceErrors', protoName: 'currentPrimaryDeviceErrors', subBuilder: Errors.create)
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'primaryDeviceSendConnectStateReq', protoName: 'primaryDeviceSendConnectStateReq')
+    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'recoveryStateActive', protoName: 'recoveryStateActive')
+    ..aOM<Errors>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'currentPrimaryDeviceErrors', protoName: 'currentPrimaryDeviceErrors', subBuilder: Errors.create)
     ..hasRequiredFields = false
   ;
 
@@ -150,6 +152,8 @@ class CooktopStatus extends $pb.GeneratedMessage {
     $core.bool? readyForSleep,
     $core.bool? primaryDeviceFactoryReset,
     $core.bool? primaryDeviceRestart,
+    $core.bool? primaryDeviceSendConnectStateReq,
+    $core.bool? recoveryStateActive,
     Errors? currentPrimaryDeviceErrors,
   }) {
     final _result = create();
@@ -164,6 +168,12 @@ class CooktopStatus extends $pb.GeneratedMessage {
     }
     if (primaryDeviceRestart != null) {
       _result.primaryDeviceRestart = primaryDeviceRestart;
+    }
+    if (primaryDeviceSendConnectStateReq != null) {
+      _result.primaryDeviceSendConnectStateReq = primaryDeviceSendConnectStateReq;
+    }
+    if (recoveryStateActive != null) {
+      _result.recoveryStateActive = recoveryStateActive;
     }
     if (currentPrimaryDeviceErrors != null) {
       _result.currentPrimaryDeviceErrors = currentPrimaryDeviceErrors;
@@ -230,15 +240,33 @@ class CooktopStatus extends $pb.GeneratedMessage {
   void clearPrimaryDeviceRestart() => clearField(4);
 
   @$pb.TagNumber(5)
-  Errors get currentPrimaryDeviceErrors => $_getN(4);
+  $core.bool get primaryDeviceSendConnectStateReq => $_getBF(4);
   @$pb.TagNumber(5)
-  set currentPrimaryDeviceErrors(Errors v) { setField(5, v); }
+  set primaryDeviceSendConnectStateReq($core.bool v) { $_setBool(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasCurrentPrimaryDeviceErrors() => $_has(4);
+  $core.bool hasPrimaryDeviceSendConnectStateReq() => $_has(4);
   @$pb.TagNumber(5)
-  void clearCurrentPrimaryDeviceErrors() => clearField(5);
-  @$pb.TagNumber(5)
-  Errors ensureCurrentPrimaryDeviceErrors() => $_ensure(4);
+  void clearPrimaryDeviceSendConnectStateReq() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.bool get recoveryStateActive => $_getBF(5);
+  @$pb.TagNumber(6)
+  set recoveryStateActive($core.bool v) { $_setBool(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasRecoveryStateActive() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearRecoveryStateActive() => clearField(6);
+
+  @$pb.TagNumber(7)
+  Errors get currentPrimaryDeviceErrors => $_getN(6);
+  @$pb.TagNumber(7)
+  set currentPrimaryDeviceErrors(Errors v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasCurrentPrimaryDeviceErrors() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearCurrentPrimaryDeviceErrors() => clearField(7);
+  @$pb.TagNumber(7)
+  Errors ensureCurrentPrimaryDeviceErrors() => $_ensure(6);
 }
 
 class Errors extends $pb.GeneratedMessage {

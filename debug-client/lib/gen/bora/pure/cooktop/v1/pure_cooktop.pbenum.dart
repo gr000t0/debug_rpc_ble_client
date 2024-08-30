@@ -91,57 +91,57 @@ class ErrorCode extends $pb.ProtobufEnum {
   static const ErrorCode ERROR_CODE_E_4_LEFT_FRONT = ErrorCode._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_4_LEFT_FRONT');
   static const ErrorCode ERROR_CODE_E_5_LEFT_FRONT = ErrorCode._(5, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_5_LEFT_FRONT');
   static const ErrorCode ERROR_CODE_E_6_LEFT_FRONT = ErrorCode._(6, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_6_LEFT_FRONT');
-  static const ErrorCode ERROR_CODE_E_8_LEFT_FRONT = ErrorCode._(7, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_8_LEFT_FRONT');
-  static const ErrorCode ERROR_CODE_E_9_LEFT_FRONT = ErrorCode._(8, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_9_LEFT_FRONT');
-  static const ErrorCode ERROR_CODE_E_A_LEFT_FRONT = ErrorCode._(9, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_A_LEFT_FRONT');
-  static const ErrorCode ERROR_CODE_H_LEFT_FRONT = ErrorCode._(10, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_H_LEFT_FRONT');
-  static const ErrorCode ERROR_CODE_E_1_LEFT_BACK = ErrorCode._(11, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_1_LEFT_BACK');
-  static const ErrorCode ERROR_CODE_E_2_LEFT_BACK = ErrorCode._(12, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_2_LEFT_BACK');
-  static const ErrorCode ERROR_CODE_E_3_LEFT_BACK = ErrorCode._(13, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_3_LEFT_BACK');
-  static const ErrorCode ERROR_CODE_E_4_LEFT_BACK = ErrorCode._(14, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_4_LEFT_BACK');
-  static const ErrorCode ERROR_CODE_E_5_LEFT_BACK = ErrorCode._(15, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_5_LEFT_BACK');
-  static const ErrorCode ERROR_CODE_E_6_LEFT_BACK = ErrorCode._(16, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_6_LEFT_BACK');
-  static const ErrorCode ERROR_CODE_E_8_LEFT_BACK = ErrorCode._(17, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_8_LEFT_BACK');
-  static const ErrorCode ERROR_CODE_E_9_LEFT_BACK = ErrorCode._(18, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_9_LEFT_BACK');
-  static const ErrorCode ERROR_CODE_E_A_LEFT_BACK = ErrorCode._(19, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_A_LEFT_BACK');
-  static const ErrorCode ERROR_CODE_H_LEFT_BACK = ErrorCode._(20, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_H_LEFT_BACK');
-  static const ErrorCode ERROR_CODE_E_1_RIGHT_BACK = ErrorCode._(21, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_1_RIGHT_BACK');
-  static const ErrorCode ERROR_CODE_E_2_RIGHT_BACK = ErrorCode._(22, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_2_RIGHT_BACK');
-  static const ErrorCode ERROR_CODE_E_3_RIGHT_BACK = ErrorCode._(23, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_3_RIGHT_BACK');
-  static const ErrorCode ERROR_CODE_E_4_RIGHT_BACK = ErrorCode._(24, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_4_RIGHT_BACK');
-  static const ErrorCode ERROR_CODE_E_5_RIGHT_BACK = ErrorCode._(25, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_5_RIGHT_BACK');
-  static const ErrorCode ERROR_CODE_E_6_RIGHT_BACK = ErrorCode._(26, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_6_RIGHT_BACK');
-  static const ErrorCode ERROR_CODE_E_8_RIGHT_BACK = ErrorCode._(27, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_8_RIGHT_BACK');
-  static const ErrorCode ERROR_CODE_E_9_RIGHT_BACK = ErrorCode._(28, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_9_RIGHT_BACK');
-  static const ErrorCode ERROR_CODE_E_A_RIGHT_BACK = ErrorCode._(29, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_A_RIGHT_BACK');
-  static const ErrorCode ERROR_CODE_H_RIGHT_BACK = ErrorCode._(30, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_H_RIGHT_BACK');
-  static const ErrorCode ERROR_CODE_E_1_RIGHT_FRONT = ErrorCode._(31, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_1_RIGHT_FRONT');
-  static const ErrorCode ERROR_CODE_E_2_RIGHT_FRONT = ErrorCode._(32, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_2_RIGHT_FRONT');
-  static const ErrorCode ERROR_CODE_E_3_RIGHT_FRONT = ErrorCode._(33, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_3_RIGHT_FRONT');
-  static const ErrorCode ERROR_CODE_E_4_RIGHT_FRONT = ErrorCode._(34, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_4_RIGHT_FRONT');
-  static const ErrorCode ERROR_CODE_E_5_RIGHT_FRONT = ErrorCode._(35, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_5_RIGHT_FRONT');
-  static const ErrorCode ERROR_CODE_E_6_RIGHT_FRONT = ErrorCode._(36, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_6_RIGHT_FRONT');
-  static const ErrorCode ERROR_CODE_E_8_RIGHT_FRONT = ErrorCode._(37, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_8_RIGHT_FRONT');
-  static const ErrorCode ERROR_CODE_E_9_RIGHT_FRONT = ErrorCode._(38, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_9_RIGHT_FRONT');
-  static const ErrorCode ERROR_CODE_E_A_RIGHT_FRONT = ErrorCode._(39, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_A_RIGHT_FRONT');
-  static const ErrorCode ERROR_CODE_H_RIGHT_FRONT = ErrorCode._(40, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_H_RIGHT_FRONT');
-  static const ErrorCode ERROR_CODE_E_03 = ErrorCode._(41, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_03');
-  static const ErrorCode ERROR_CODE_E_07 = ErrorCode._(42, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_07');
-  static const ErrorCode ERROR_CODE_E_13 = ErrorCode._(43, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_13');
-  static const ErrorCode ERROR_CODE_E_21 = ErrorCode._(44, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_21');
-  static const ErrorCode ERROR_CODE_E_22 = ErrorCode._(45, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_22');
-  static const ErrorCode ERROR_CODE_E_35 = ErrorCode._(46, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_35');
-  static const ErrorCode ERROR_CODE_E_47 = ErrorCode._(47, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_47');
-  static const ErrorCode ERROR_CODE_E_58 = ErrorCode._(48, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_58');
-  static const ErrorCode ERROR_CODE_E_95 = ErrorCode._(49, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_95');
-  static const ErrorCode ERROR_CODE_E_96 = ErrorCode._(50, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_96');
-  static const ErrorCode ERROR_CODE_E_97 = ErrorCode._(51, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_97');
-  static const ErrorCode ERROR_CODE_E_98 = ErrorCode._(52, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_98');
-  static const ErrorCode ERROR_CODE_E_99 = ErrorCode._(53, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_99');
-  static const ErrorCode ERROR_CODE_U_400 = ErrorCode._(54, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_U_400');
-  static const ErrorCode ERROR_CODE_E_B = ErrorCode._(55, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_B');
-  static const ErrorCode ERROR_CODE_E_C = ErrorCode._(56, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_C');
-  static const ErrorCode ERROR_CODE_E_D = ErrorCode._(57, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_D');
+  static const ErrorCode ERROR_CODE_E_7_LEFT_FRONT = ErrorCode._(7, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_7_LEFT_FRONT');
+  static const ErrorCode ERROR_CODE_E_8_LEFT_FRONT = ErrorCode._(8, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_8_LEFT_FRONT');
+  static const ErrorCode ERROR_CODE_E_9_LEFT_FRONT = ErrorCode._(9, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_9_LEFT_FRONT');
+  static const ErrorCode ERROR_CODE_E_A_LEFT_FRONT = ErrorCode._(10, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_A_LEFT_FRONT');
+  static const ErrorCode ERROR_CODE_H_LEFT_FRONT = ErrorCode._(11, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_H_LEFT_FRONT');
+  static const ErrorCode ERROR_CODE_E_1_LEFT_BACK = ErrorCode._(12, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_1_LEFT_BACK');
+  static const ErrorCode ERROR_CODE_E_2_LEFT_BACK = ErrorCode._(13, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_2_LEFT_BACK');
+  static const ErrorCode ERROR_CODE_E_3_LEFT_BACK = ErrorCode._(14, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_3_LEFT_BACK');
+  static const ErrorCode ERROR_CODE_E_4_LEFT_BACK = ErrorCode._(15, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_4_LEFT_BACK');
+  static const ErrorCode ERROR_CODE_E_5_LEFT_BACK = ErrorCode._(16, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_5_LEFT_BACK');
+  static const ErrorCode ERROR_CODE_E_6_LEFT_BACK = ErrorCode._(17, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_6_LEFT_BACK');
+  static const ErrorCode ERROR_CODE_E_7_LEFT_BACK = ErrorCode._(18, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_7_LEFT_BACK');
+  static const ErrorCode ERROR_CODE_E_8_LEFT_BACK = ErrorCode._(19, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_8_LEFT_BACK');
+  static const ErrorCode ERROR_CODE_E_9_LEFT_BACK = ErrorCode._(20, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_9_LEFT_BACK');
+  static const ErrorCode ERROR_CODE_E_A_LEFT_BACK = ErrorCode._(21, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_A_LEFT_BACK');
+  static const ErrorCode ERROR_CODE_H_LEFT_BACK = ErrorCode._(22, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_H_LEFT_BACK');
+  static const ErrorCode ERROR_CODE_E_1_RIGHT_BACK = ErrorCode._(23, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_1_RIGHT_BACK');
+  static const ErrorCode ERROR_CODE_E_2_RIGHT_BACK = ErrorCode._(24, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_2_RIGHT_BACK');
+  static const ErrorCode ERROR_CODE_E_3_RIGHT_BACK = ErrorCode._(25, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_3_RIGHT_BACK');
+  static const ErrorCode ERROR_CODE_E_4_RIGHT_BACK = ErrorCode._(26, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_4_RIGHT_BACK');
+  static const ErrorCode ERROR_CODE_E_5_RIGHT_BACK = ErrorCode._(27, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_5_RIGHT_BACK');
+  static const ErrorCode ERROR_CODE_E_6_RIGHT_BACK = ErrorCode._(28, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_6_RIGHT_BACK');
+  static const ErrorCode ERROR_CODE_E_7_RIGHT_BACK = ErrorCode._(29, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_7_RIGHT_BACK');
+  static const ErrorCode ERROR_CODE_E_8_RIGHT_BACK = ErrorCode._(30, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_8_RIGHT_BACK');
+  static const ErrorCode ERROR_CODE_E_9_RIGHT_BACK = ErrorCode._(31, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_9_RIGHT_BACK');
+  static const ErrorCode ERROR_CODE_E_A_RIGHT_BACK = ErrorCode._(32, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_A_RIGHT_BACK');
+  static const ErrorCode ERROR_CODE_H_RIGHT_BACK = ErrorCode._(33, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_H_RIGHT_BACK');
+  static const ErrorCode ERROR_CODE_E_1_RIGHT_FRONT = ErrorCode._(34, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_1_RIGHT_FRONT');
+  static const ErrorCode ERROR_CODE_E_2_RIGHT_FRONT = ErrorCode._(35, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_2_RIGHT_FRONT');
+  static const ErrorCode ERROR_CODE_E_3_RIGHT_FRONT = ErrorCode._(36, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_3_RIGHT_FRONT');
+  static const ErrorCode ERROR_CODE_E_4_RIGHT_FRONT = ErrorCode._(37, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_4_RIGHT_FRONT');
+  static const ErrorCode ERROR_CODE_E_5_RIGHT_FRONT = ErrorCode._(38, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_5_RIGHT_FRONT');
+  static const ErrorCode ERROR_CODE_E_6_RIGHT_FRONT = ErrorCode._(39, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_6_RIGHT_FRONT');
+  static const ErrorCode ERROR_CODE_E_7_RIGHT_FRONT = ErrorCode._(40, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_7_RIGHT_FRONT');
+  static const ErrorCode ERROR_CODE_E_8_RIGHT_FRONT = ErrorCode._(41, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_8_RIGHT_FRONT');
+  static const ErrorCode ERROR_CODE_E_9_RIGHT_FRONT = ErrorCode._(42, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_9_RIGHT_FRONT');
+  static const ErrorCode ERROR_CODE_E_A_RIGHT_FRONT = ErrorCode._(43, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_A_RIGHT_FRONT');
+  static const ErrorCode ERROR_CODE_H_RIGHT_FRONT = ErrorCode._(44, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_H_RIGHT_FRONT');
+  static const ErrorCode ERROR_CODE_E_03 = ErrorCode._(45, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_03');
+  static const ErrorCode ERROR_CODE_E_07 = ErrorCode._(46, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_07');
+  static const ErrorCode ERROR_CODE_E_13 = ErrorCode._(47, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_13');
+  static const ErrorCode ERROR_CODE_E_21 = ErrorCode._(48, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_21');
+  static const ErrorCode ERROR_CODE_E_22 = ErrorCode._(49, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_22');
+  static const ErrorCode ERROR_CODE_E_35 = ErrorCode._(50, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_35');
+  static const ErrorCode ERROR_CODE_E_58 = ErrorCode._(51, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_58');
+  static const ErrorCode ERROR_CODE_E_90 = ErrorCode._(52, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_90');
+  static const ErrorCode ERROR_CODE_E_91 = ErrorCode._(53, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_91');
+  static const ErrorCode ERROR_CODE_E_92 = ErrorCode._(54, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_92');
+  static const ErrorCode ERROR_CODE_E_93 = ErrorCode._(55, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_93');
+  static const ErrorCode ERROR_CODE_U_400 = ErrorCode._(56, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_U_400');
+  static const ErrorCode ERROR_CODE_E_0_C = ErrorCode._(57, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_0_C');
   static const ErrorCode ERROR_CODE_E_E = ErrorCode._(58, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ERROR_CODE_E_E');
 
   static const $core.List<ErrorCode> values = <ErrorCode> [
@@ -152,6 +152,7 @@ class ErrorCode extends $pb.ProtobufEnum {
     ERROR_CODE_E_4_LEFT_FRONT,
     ERROR_CODE_E_5_LEFT_FRONT,
     ERROR_CODE_E_6_LEFT_FRONT,
+    ERROR_CODE_E_7_LEFT_FRONT,
     ERROR_CODE_E_8_LEFT_FRONT,
     ERROR_CODE_E_9_LEFT_FRONT,
     ERROR_CODE_E_A_LEFT_FRONT,
@@ -162,6 +163,7 @@ class ErrorCode extends $pb.ProtobufEnum {
     ERROR_CODE_E_4_LEFT_BACK,
     ERROR_CODE_E_5_LEFT_BACK,
     ERROR_CODE_E_6_LEFT_BACK,
+    ERROR_CODE_E_7_LEFT_BACK,
     ERROR_CODE_E_8_LEFT_BACK,
     ERROR_CODE_E_9_LEFT_BACK,
     ERROR_CODE_E_A_LEFT_BACK,
@@ -172,6 +174,7 @@ class ErrorCode extends $pb.ProtobufEnum {
     ERROR_CODE_E_4_RIGHT_BACK,
     ERROR_CODE_E_5_RIGHT_BACK,
     ERROR_CODE_E_6_RIGHT_BACK,
+    ERROR_CODE_E_7_RIGHT_BACK,
     ERROR_CODE_E_8_RIGHT_BACK,
     ERROR_CODE_E_9_RIGHT_BACK,
     ERROR_CODE_E_A_RIGHT_BACK,
@@ -182,6 +185,7 @@ class ErrorCode extends $pb.ProtobufEnum {
     ERROR_CODE_E_4_RIGHT_FRONT,
     ERROR_CODE_E_5_RIGHT_FRONT,
     ERROR_CODE_E_6_RIGHT_FRONT,
+    ERROR_CODE_E_7_RIGHT_FRONT,
     ERROR_CODE_E_8_RIGHT_FRONT,
     ERROR_CODE_E_9_RIGHT_FRONT,
     ERROR_CODE_E_A_RIGHT_FRONT,
@@ -192,17 +196,13 @@ class ErrorCode extends $pb.ProtobufEnum {
     ERROR_CODE_E_21,
     ERROR_CODE_E_22,
     ERROR_CODE_E_35,
-    ERROR_CODE_E_47,
     ERROR_CODE_E_58,
-    ERROR_CODE_E_95,
-    ERROR_CODE_E_96,
-    ERROR_CODE_E_97,
-    ERROR_CODE_E_98,
-    ERROR_CODE_E_99,
+    ERROR_CODE_E_90,
+    ERROR_CODE_E_91,
+    ERROR_CODE_E_92,
+    ERROR_CODE_E_93,
     ERROR_CODE_U_400,
-    ERROR_CODE_E_B,
-    ERROR_CODE_E_C,
-    ERROR_CODE_E_D,
+    ERROR_CODE_E_0_C,
     ERROR_CODE_E_E,
   ];
 

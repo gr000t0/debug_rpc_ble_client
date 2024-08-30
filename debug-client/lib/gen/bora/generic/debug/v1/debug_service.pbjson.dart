@@ -8,19 +8,6 @@
 import 'dart:core' as $core;
 import 'dart:convert' as $convert;
 import 'dart:typed_data' as $typed_data;
-@$core.Deprecated('Use cloudEnvironmentDescriptor instead')
-const CloudEnvironment$json = const {
-  '1': 'CloudEnvironment',
-  '2': const [
-    const {'1': 'CLOUD_ENVIRONMENT_UNSPECIFIED', '2': 0},
-    const {'1': 'CLOUD_ENVIRONMENT_EU_PROD', '2': 1},
-    const {'1': 'CLOUD_ENVIRONMENT_EU_STG', '2': 2},
-    const {'1': 'CLOUD_ENVIRONMENT_EU_DEV', '2': 3},
-  ],
-};
-
-/// Descriptor for `CloudEnvironment`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List cloudEnvironmentDescriptor = $convert.base64Decode('ChBDbG91ZEVudmlyb25tZW50EiEKHUNMT1VEX0VOVklST05NRU5UX1VOU1BFQ0lGSUVEEAASHQoZQ0xPVURfRU5WSVJPTk1FTlRfRVVfUFJPRBABEhwKGENMT1VEX0VOVklST05NRU5UX0VVX1NURxACEhwKGENMT1VEX0VOVklST05NRU5UX0VVX0RFVhAD');
 @$core.Deprecated('Use getHeartbeatStatusRequestDescriptor instead')
 const GetHeartbeatStatusRequest$json = const {
   '1': 'GetHeartbeatStatusRequest',
@@ -81,26 +68,6 @@ const FactoryResetStatusResponse$json = const {
 
 /// Descriptor for `FactoryResetStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List factoryResetStatusResponseDescriptor = $convert.base64Decode('ChpGYWN0b3J5UmVzZXRTdGF0dXNSZXNwb25zZRIqChBmYWN0b3J5UmVzZXREb25lGAEgASgIUhBmYWN0b3J5UmVzZXREb25l');
-@$core.Deprecated('Use restartIoTProvisioningRequestDescriptor instead')
-const RestartIoTProvisioningRequest$json = const {
-  '1': 'RestartIoTProvisioningRequest',
-  '2': const [
-    const {'1': 'cloudEnvironment', '3': 1, '4': 1, '5': 14, '6': '.bora.generic.debug.v1.CloudEnvironment', '10': 'cloudEnvironment'},
-  ],
-};
-
-/// Descriptor for `RestartIoTProvisioningRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List restartIoTProvisioningRequestDescriptor = $convert.base64Decode('Ch1SZXN0YXJ0SW9UUHJvdmlzaW9uaW5nUmVxdWVzdBJTChBjbG91ZEVudmlyb25tZW50GAEgASgOMicuYm9yYS5nZW5lcmljLmRlYnVnLnYxLkNsb3VkRW52aXJvbm1lbnRSEGNsb3VkRW52aXJvbm1lbnQ=');
-@$core.Deprecated('Use restartIoTProvisioningResponseDescriptor instead')
-const RestartIoTProvisioningResponse$json = const {
-  '1': 'RestartIoTProvisioningResponse',
-  '2': const [
-    const {'1': 'restartProvisioningDone', '3': 1, '4': 1, '5': 8, '10': 'restartProvisioningDone'},
-  ],
-};
-
-/// Descriptor for `RestartIoTProvisioningResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List restartIoTProvisioningResponseDescriptor = $convert.base64Decode('Ch5SZXN0YXJ0SW9UUHJvdmlzaW9uaW5nUmVzcG9uc2USOAoXcmVzdGFydFByb3Zpc2lvbmluZ0RvbmUYASABKAhSF3Jlc3RhcnRQcm92aXNpb25pbmdEb25l');
 @$core.Deprecated('Use deleteWiFiCredentialsRequestDescriptor instead')
 const DeleteWiFiCredentialsRequest$json = const {
   '1': 'DeleteWiFiCredentialsRequest',
@@ -126,7 +93,6 @@ const $core.Map<$core.String, $core.dynamic> DebugServiceBase$json = const {
     const {'1': 'ActivateHeartbeat', '2': '.bora.generic.debug.v1.ActivateHeartbeatRequest', '3': '.bora.generic.debug.v1.HeartbeatStatusResponse'},
     const {'1': 'SetHeartbeatPeriod', '2': '.bora.generic.debug.v1.SetHeartbeatPeriodRequest', '3': '.bora.generic.debug.v1.HeartbeatStatusResponse'},
     const {'1': 'InvokeFactoryReset', '2': '.bora.generic.debug.v1.InvokeFactoryResetRequest', '3': '.bora.generic.debug.v1.FactoryResetStatusResponse'},
-    const {'1': 'RestartIoTProvisioning', '2': '.bora.generic.debug.v1.RestartIoTProvisioningRequest', '3': '.bora.generic.debug.v1.RestartIoTProvisioningResponse'},
     const {'1': 'DeleteWiFiCredentials', '2': '.bora.generic.debug.v1.DeleteWiFiCredentialsRequest', '3': '.bora.generic.debug.v1.DeleteWiFiCredentialsResponse'},
   ],
 };
@@ -140,11 +106,9 @@ const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> DebugServi
   '.bora.generic.debug.v1.SetHeartbeatPeriodRequest': SetHeartbeatPeriodRequest$json,
   '.bora.generic.debug.v1.InvokeFactoryResetRequest': InvokeFactoryResetRequest$json,
   '.bora.generic.debug.v1.FactoryResetStatusResponse': FactoryResetStatusResponse$json,
-  '.bora.generic.debug.v1.RestartIoTProvisioningRequest': RestartIoTProvisioningRequest$json,
-  '.bora.generic.debug.v1.RestartIoTProvisioningResponse': RestartIoTProvisioningResponse$json,
   '.bora.generic.debug.v1.DeleteWiFiCredentialsRequest': DeleteWiFiCredentialsRequest$json,
   '.bora.generic.debug.v1.DeleteWiFiCredentialsResponse': DeleteWiFiCredentialsResponse$json,
 };
 
 /// Descriptor for `DebugService`. Decode as a `google.protobuf.ServiceDescriptorProto`.
-final $typed_data.Uint8List debugServiceDescriptor = $convert.base64Decode('CgxEZWJ1Z1NlcnZpY2USdgoSR2V0SGVhcnRiZWF0U3RhdHVzEjAuYm9yYS5nZW5lcmljLmRlYnVnLnYxLkdldEhlYXJ0YmVhdFN0YXR1c1JlcXVlc3QaLi5ib3JhLmdlbmVyaWMuZGVidWcudjEuSGVhcnRiZWF0U3RhdHVzUmVzcG9uc2USeAoTRGVhY3RpdmF0ZUhlYXJ0YmVhdBIxLmJvcmEuZ2VuZXJpYy5kZWJ1Zy52MS5EZWFjdGl2YXRlSGVhcnRiZWF0UmVxdWVzdBouLmJvcmEuZ2VuZXJpYy5kZWJ1Zy52MS5IZWFydGJlYXRTdGF0dXNSZXNwb25zZRJ0ChFBY3RpdmF0ZUhlYXJ0YmVhdBIvLmJvcmEuZ2VuZXJpYy5kZWJ1Zy52MS5BY3RpdmF0ZUhlYXJ0YmVhdFJlcXVlc3QaLi5ib3JhLmdlbmVyaWMuZGVidWcudjEuSGVhcnRiZWF0U3RhdHVzUmVzcG9uc2USdgoSU2V0SGVhcnRiZWF0UGVyaW9kEjAuYm9yYS5nZW5lcmljLmRlYnVnLnYxLlNldEhlYXJ0YmVhdFBlcmlvZFJlcXVlc3QaLi5ib3JhLmdlbmVyaWMuZGVidWcudjEuSGVhcnRiZWF0U3RhdHVzUmVzcG9uc2USeQoSSW52b2tlRmFjdG9yeVJlc2V0EjAuYm9yYS5nZW5lcmljLmRlYnVnLnYxLkludm9rZUZhY3RvcnlSZXNldFJlcXVlc3QaMS5ib3JhLmdlbmVyaWMuZGVidWcudjEuRmFjdG9yeVJlc2V0U3RhdHVzUmVzcG9uc2UShQEKFlJlc3RhcnRJb1RQcm92aXNpb25pbmcSNC5ib3JhLmdlbmVyaWMuZGVidWcudjEuUmVzdGFydElvVFByb3Zpc2lvbmluZ1JlcXVlc3QaNS5ib3JhLmdlbmVyaWMuZGVidWcudjEuUmVzdGFydElvVFByb3Zpc2lvbmluZ1Jlc3BvbnNlEoIBChVEZWxldGVXaUZpQ3JlZGVudGlhbHMSMy5ib3JhLmdlbmVyaWMuZGVidWcudjEuRGVsZXRlV2lGaUNyZWRlbnRpYWxzUmVxdWVzdBo0LmJvcmEuZ2VuZXJpYy5kZWJ1Zy52MS5EZWxldGVXaUZpQ3JlZGVudGlhbHNSZXNwb25zZQ==');
+final $typed_data.Uint8List debugServiceDescriptor = $convert.base64Decode('CgxEZWJ1Z1NlcnZpY2USdgoSR2V0SGVhcnRiZWF0U3RhdHVzEjAuYm9yYS5nZW5lcmljLmRlYnVnLnYxLkdldEhlYXJ0YmVhdFN0YXR1c1JlcXVlc3QaLi5ib3JhLmdlbmVyaWMuZGVidWcudjEuSGVhcnRiZWF0U3RhdHVzUmVzcG9uc2USeAoTRGVhY3RpdmF0ZUhlYXJ0YmVhdBIxLmJvcmEuZ2VuZXJpYy5kZWJ1Zy52MS5EZWFjdGl2YXRlSGVhcnRiZWF0UmVxdWVzdBouLmJvcmEuZ2VuZXJpYy5kZWJ1Zy52MS5IZWFydGJlYXRTdGF0dXNSZXNwb25zZRJ0ChFBY3RpdmF0ZUhlYXJ0YmVhdBIvLmJvcmEuZ2VuZXJpYy5kZWJ1Zy52MS5BY3RpdmF0ZUhlYXJ0YmVhdFJlcXVlc3QaLi5ib3JhLmdlbmVyaWMuZGVidWcudjEuSGVhcnRiZWF0U3RhdHVzUmVzcG9uc2USdgoSU2V0SGVhcnRiZWF0UGVyaW9kEjAuYm9yYS5nZW5lcmljLmRlYnVnLnYxLlNldEhlYXJ0YmVhdFBlcmlvZFJlcXVlc3QaLi5ib3JhLmdlbmVyaWMuZGVidWcudjEuSGVhcnRiZWF0U3RhdHVzUmVzcG9uc2USeQoSSW52b2tlRmFjdG9yeVJlc2V0EjAuYm9yYS5nZW5lcmljLmRlYnVnLnYxLkludm9rZUZhY3RvcnlSZXNldFJlcXVlc3QaMS5ib3JhLmdlbmVyaWMuZGVidWcudjEuRmFjdG9yeVJlc2V0U3RhdHVzUmVzcG9uc2USggEKFURlbGV0ZVdpRmlDcmVkZW50aWFscxIzLmJvcmEuZ2VuZXJpYy5kZWJ1Zy52MS5EZWxldGVXaUZpQ3JlZGVudGlhbHNSZXF1ZXN0GjQuYm9yYS5nZW5lcmljLmRlYnVnLnYxLkRlbGV0ZVdpRmlDcmVkZW50aWFsc1Jlc3BvbnNl');

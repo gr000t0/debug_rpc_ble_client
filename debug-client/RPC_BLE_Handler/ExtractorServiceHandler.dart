@@ -35,7 +35,9 @@ class ExtractorServiceHandler {
   }
 
   Future<void> setEggTimer(int duration) async {
+     await client.setEggTimerState(SetEggTimerStateRequest(reqState: true), RequestOptions(headers: {}));
     var response = await client.setEggTimer(SetEggTimerRequest(duration: duration), RequestOptions(headers: {}));
+    await client.setEggTimerState(SetEggTimerStateRequest(reqState: true), RequestOptions(headers: {}));
     print(response.toString());
   }
 

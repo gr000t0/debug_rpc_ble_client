@@ -1,0 +1,191 @@
+Call: cooktopService:setChildLock-on
+Unhandled exception:
+RPCException(Code.unavailable): Only allowed in off state
+
+Call: cooktopService:getCooktopSettings
+childlockSetting: CHILD_LOCK_SETTING_UNLOCKED
+connectivitySetting: CONNECTIVITY_SETTING_ON
+pure: {
+  sensitivity: SENSITIVITY_DEFAULT
+  maxOpDuration: MAX_OP_DURATION_HIGH
+  superSimpleMode: {
+    disabledFunctions: {
+    }
+  }
+  remainingFilterLifetime: 8971
+  dealerMenuConfig: {
+    extractionType: EXTRACTION_TYPE_CIRCULATION
+    powerManagement: POWER_MANAGEMENT_FULL_PERFORMANCE
+  }
+}
+
+Childlocksetting: CHILD_LOCK_SETTING_UNLOCKED
+Pause: false
+CennectivitySetting: CONNECTIVITY_SETTING_ON
+SignalVolume: 0
+pure: 
+  cleanLock: false
+  automaticPotDetection: false
+  remainingFilterLifetime: 8971
+  permanentChildLock: false
+  sensitivity: SENSITIVITY_DEFAULT
+  maxOpDuration: MAX_OP_DURATION_HIGH
+  superSimpleMode: disabledFunctions: {
+}
+
+  dealerMenuConfig: extractionType: EXTRACTION_TYPE_CIRCULATION
+powerManagement: POWER_MANAGEMENT_FULL_PERFORMANCE
+
+
+Call: cooktopService:setPaused-true
+true
+
+Call: cooktopService:setPaused-false
+false
+
+Call: cooktopService:setSignalVolume-3
+Unhandled exception:
+RPCException(Code.unavailable): Only allowed in off state
+
+Call: cooktopService:getCooktopStatus
+cooktopSettings: {
+  childlockSetting: CHILD_LOCK_SETTING_UNLOCKED
+  connectivitySetting: CONNECTIVITY_SETTING_ON
+  pure: {
+    sensitivity: SENSITIVITY_DEFAULT
+    maxOpDuration: MAX_OP_DURATION_HIGH
+    superSimpleMode: {
+      disabledFunctions: {
+      }
+    }
+    remainingFilterLifetime: 8971
+    dealerMenuConfig: {
+      extractionType: EXTRACTION_TYPE_CIRCULATION
+      powerManagement: POWER_MANAGEMENT_FULL_PERFORMANCE
+    }
+  }
+}
+currentPrimaryDeviceErrors: {
+}
+
+CooktopSettings: childlockSetting: CHILD_LOCK_SETTING_UNLOCKED
+connectivitySetting: CONNECTIVITY_SETTING_ON
+pure: {
+  sensitivity: SENSITIVITY_DEFAULT
+  maxOpDuration: MAX_OP_DURATION_HIGH
+  superSimpleMode: {
+    disabledFunctions: {
+    }
+  }
+  remainingFilterLifetime: 8971
+  dealerMenuConfig: {
+    extractionType: EXTRACTION_TYPE_CIRCULATION
+    powerManagement: POWER_MANAGEMENT_FULL_PERFORMANCE
+  }
+}
+
+readyForSleep: false
+primaryDeviceFactoryReset: false
+primaryDeviceRestart: false
+currentPrimaryDevicErrors: 
+recoveryStateActive: false
+
+Call: extractorService:getExtractorSettings
+extractorMode: {
+  powerLevel: 0
+}
+pure: {
+  afterRunDuration: AFTER_RUN_DURATION_20MINS
+}
+
+
+powerLevel: 0
+
+AFTER_RUN_DURATION_20MINS
+
+Call: extractorService:setEggTimerState-false
+Unhandled exception:
+TimeoutException: A timeout occurred.
+
+Call: extractorService:setExtractorMode-5
+Unhandled exception:
+TimeoutException: A timeout occurred.
+
+Call: extractorService:stopAfterRun
+Unhandled exception:
+TimeoutException: A timeout occurred.
+
+Call: extractorService:setDurationAfterRun-10
+Unhandled exception:
+TimeoutException: A timeout occurred.
+
+Call: extractorService:getExtractorStatus
+Unhandled exception:
+TimeoutException: A timeout occurred.
+
+Call: csfService:getSavedCsf
+Unhandled exception:
+TimeoutException: A timeout occurred.
+
+Call: wifiProvisioningService:getWifiStatus
+Unhandled exception:
+TimeoutException: A timeout occurred.
+
+Call: wifiProvisioningService:wifiProvisioning-mywifi-internet333
+Unhandled exception:
+TimeoutException: A timeout occurred.
+
+Call: identifyService:getSystemInformation
+Unhandled exception:
+TimeoutException: A timeout occurred.
+
+Call: identifyService:getSystemValueRangeDescriptor
+Unhandled exception:
+RPCException(Code.unknown): timeout
+
+Call: loggingService:listSysEvents
+Unhandled exception:
+TimeoutException: A timeout occurred.
+
+Call: loggingService:listUserEvents
+Unhandled exception:
+TimeoutException: A timeout occurred.
+
+Call: zoneService:getZoneSettingsAll
+Zone Settings front_left: uId: front_left
+mode: {
+  powerLevel: 1
+}
+timer: {
+}
+
+Zone Settings front_right: uId: front_right
+mode: {
+  powerLevel: 0
+}
+timer: {
+}
+
+Zone Settings back_left: uId: back_left
+mode: {
+  powerLevel: 1
+}
+timer: {
+}
+
+Zone Settings back_right: uId: back_right
+mode: {
+  powerLevel: 0
+}
+timer: {
+}
+
+
+Call: zoneService:startOrModifyCsf-front_left-44-3-frying-200-10-0-0-false-120-220-1
+Unhandled exception:
+RPCException(Code.unknown): requested preset could not be set (see LOGD)
+
+Call: zoneService:stopCsf-front_left
+Unhandled exception:
+TimeoutException: A timeout occurred.
+

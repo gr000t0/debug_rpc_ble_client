@@ -3,6 +3,7 @@ import 'package:bora_rpc/gen/bora/generic/cooktop/v1/cooktop_service.pbclient.da
 import 'package:bora_rpc/gen/bora/generic/cooktop/v1/generic_cooktop.pb.dart';
 import 'package:bora_rpc/gen/bora/pure/cooktop/v1/pure_cooktop.pb.dart';
 import 'package:bora_rpc/src/client/call.dart';
+import 'package:bora_rpc/gen/bora_rpc/rpc.pb.dart' as proto;
 
 
 
@@ -94,9 +95,20 @@ class CooktopServiceHandler {
 }
 
 Future<void> getCooktopStatusUpdates () async {
-  
-  await for  (var response in client.streamCooktopStatusUpdates(StreamCooktopStatusUpdatesRequest(), RequestOptions(headers: {}))){
-  print(response.toString()); }
+  List<int> bytes = [];
+
+  String hexString = '7E18e6a1ecfe0a221e0a17100318042a11180228023202120038a8464204080110033a030a012d3801B89A0E127C';
+  // Hex-String in Zweiergruppen durchlaufen
+  for (int i = 0; i < hexString.length; i += 2) {
+    // Zweiergruppe als Byte interpretieren und zur Liste hinzufügen
+    String byteString = hexString.substring(i, i + 2);
+    int byte = int.parse(byteString, radix: 16);
+    bytes.add(byte);
+  }
+  var response = proto.Response.fromBuffer(bytes);
+  print(response.toString());
+  //await for  (var response in client.streamCooktopStatusUpdates(StreamCooktopStatusUpdatesRequest(), RequestOptions(headers: {}))){
+  // print(response.toString()); }
 }
 
 Future<void> setSignalVolume(int volume) async {
@@ -108,12 +120,14 @@ Future<void> getCooktopStatus() async {
   
   
   var response = await client.getCooktopStatus(GetCooktopStatusRequest(), RequestOptions(headers: {}));
-  print(response.toString());
+  print(response.toDebugString());
+  print ("----------------------------------------");
   print("CooktopSettings: " + response.cooktopSettings.toString());
   print("readyForSleep: " + response.readyForSleep.toString());
   print("primaryDeviceFactoryReset: " + response.primaryDeviceFactoryReset.toString());
   print("primaryDeviceRestart: " + response.primaryDeviceRestart.toString());
   print("currentPrimaryDevicErrors: " + response.currentPrimaryDeviceErrors.toString());
+  print("recoveryStateActive: " + response.recoveryStateActive.toString());
 
 }
 

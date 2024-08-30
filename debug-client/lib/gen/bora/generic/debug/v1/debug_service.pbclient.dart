@@ -55,14 +55,6 @@ class DebugServiceClient extends $rpc.ServiceClient {
     false,
     false,
   );
-  static final _$restartIoTProvisioning = $rpc.Method<
-      $0.RestartIoTProvisioningRequest, $0.RestartIoTProvisioningResponse>(
-    '/bora.generic.debug.v1.DebugService/RestartIoTProvisioning',
-    (req) => req.writeToBuffer(),
-    (res) => $0.RestartIoTProvisioningResponse.fromBuffer(res),
-    false,
-    false,
-  );
   static final _$deleteWiFiCredentials = $rpc.Method<
       $0.DeleteWiFiCredentialsRequest, $0.DeleteWiFiCredentialsResponse>(
     '/bora.generic.debug.v1.DebugService/DeleteWiFiCredentials',
@@ -100,12 +92,6 @@ class DebugServiceClient extends $rpc.ServiceClient {
       $0.InvokeFactoryResetRequest request,
       [$rpc.RequestOptions? options]) {
     return $createCall(_$invokeFactoryReset, request, options);
-  }
-
-  $rpc.ResponseFuture<$0.RestartIoTProvisioningResponse> restartIoTProvisioning(
-      $0.RestartIoTProvisioningRequest request,
-      [$rpc.RequestOptions? options]) {
-    return $createCall(_$restartIoTProvisioning, request, options);
   }
 
   $rpc.ResponseFuture<$0.DeleteWiFiCredentialsResponse> deleteWiFiCredentials(

@@ -8,7 +8,7 @@ import 'RPC_BLE_Handler/ExtractorServiceHandler.dart';
 import 'RPC_BLE_Handler/CsfServiceHandler.dart';
 import 'RPC_BLE_Handler/WifiProvisioningServiceHandler.dart';
 import 'RPC_BLE_Handler/DebugServiceHandler.dart';
-import 'RPC_BLE_Handler/ErrorServiceHandler.dart';
+//import 'RPC_BLE_Handler/ErrorServiceHandler.dart';
 import 'RPC_BLE_Handler/IdentifyServiceHandler.dart';
 import 'RPC_BLE_Handler/LoggingServiceHandler.dart';
 import 'RPC_BLE_Handler/ZoneServiceHandler.dart';
@@ -59,10 +59,10 @@ void main(List<String> argv) async {
       var debugServiceHandler = DebugServiceHandler(connection);
       await debugServiceHandler.callMethod(methodName);
       break;
-    case 'errorService':
+    /*case 'errorService':
       var errorServiceHandler = ErrorServiceHandler(connection);
       await errorServiceHandler.callMethod(methodName);
-      break;
+      break; */
     case 'identifyService':
       var identifyServiceHandler = IdentifyServiceHandler(connection);
       await identifyServiceHandler.callMethod(methodName);
