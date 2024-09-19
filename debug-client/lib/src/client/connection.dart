@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'dart:math';
 import 'package:logging/logging.dart';
 
 import '../code.dart';
@@ -48,11 +48,9 @@ class Connection {
   }) : transport = FramingTransport(transport, mtu: mtu);
 
   int _nextRequestId() {
-    if (_currentRequestId >= int64MaxValue) {
-      _currentRequestId = 0;
-    }
-    _currentRequestId++;
-    return _currentRequestId;
+    var random = Random();
+    return random.nextInt(30000);
+    // return 18;
   }
 
   Future $dispatchCall(Call call) async {
@@ -161,6 +159,7 @@ class Connection {
     var call = _pendingCalls[response.requestId];
     if (call == null) {
       log.fine('no call found for id ${response.requestId}');
+      print("no call found for id ${response.requestId}");
       return;
     }
 
